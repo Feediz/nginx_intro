@@ -1,0 +1,48 @@
+# starting
+docker build -t nodeapp .
+docker run --name nodeapp -p 999:9999 nodeapp
+
+# stoping docker
+docker stop nodeapp
+docker rm nodeapp
+
+
+================================================================
+- docker run -d -p 8000:9999 nodeapp
+- docker run -d -p 8001:9999 nodeapp
+- docker run -d -p 8002:9999 nodeapp
+
+================================================================
+Install nginx
+brew install nginx
+
+
+
+================================================================
+Usefull commands
+- nginx # starts nginx
+- nginx -s stop # stops nginx
+- nginx -s reload # reload nginx
+
+
+================================================================
+Install letsencrypt
+- brew install letsencrypt
+- nginx -s stop # stops nginx
+
+# certonly indicates to certbot not to touch configuration files
+- sudo certbot certonly --standalone
+
+
+### If developing in local dev use mkcert
+- brew install mkcert
+- brew install nss # if you use Firefox
+- mkcert -install # adding mkcert to local root CAs
+
+================================================================
+
+
+macos nginx conf location
+/usr/local/etc/nginx/nginx.conf
+
+
